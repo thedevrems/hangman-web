@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{.HangmanWebTranslations.Title}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="menu1">
+            <a href="./index.html" class="logo">{{.HangmanWebTranslations.NavLogoTitle}}</a>
+            <a href="./index.html">{{.HangmanWebTranslations.NavAbout}}</a>
+            <a href="./game.html" id="active">{{.HangmanWebTranslations.NavGame}}</a>
+            <a href="./configuration.html">{{.HangmanWebTranslations.NavConfig}}</a>
+        </div>
+    </header>
+    
+    <div class="game-align-center">
+      <!-- Affichage de(s) -->
+      <div  class="data-info-game">
+        <!-- Victoire et défaite -->
+        {{.GameData.PrintNbrVictoryAndLoose}}
+        <!-- Lettre / mots déjà saisis -->
+        {{.GameData.PrintLetterAndWord}}
+        <!-- Nbr Jokers -->
+        {{.GameData.PrintNbrJokers}}
+        <!-- Affichage des infos -->
+        {{.GameData.PrintInfo}}
+      </div>
+      <!-- Affichage du mot -->
+      <div class="word-display">
+        {{.GameData.CurrentWordFormattedHTML}}
+      </div>
+      <!-- Envoie de lettre et de mots -->
+      {{.GameData.DataInputField}}
+      <!-- Affichage du hangman -->
+      {{.GameData.StageHangmanFormattedHTML}}
+      <!-- Bouton de réinitialisation -->
+       <div class="align-game-button">
+        <form action="/reset-game" method="POST">
+          <button type="submit" class="button-style">Réinitialiser la partie</button>
+        </form>
+        {{.GameData.AddButtonForUseJoker}}
+       </div>
+    </div>
+</body>
+</html>
