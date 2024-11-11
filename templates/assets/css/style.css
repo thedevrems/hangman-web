@@ -1,303 +1,257 @@
 
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background: white;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: white;
+  color: #333;
 }
 
 
 header {
-    width: 100%;
-    background-color: #e2e2e2;
-    display: flex;
-    justify-content: space-between;
-    align-items:baseline;
-    padding: 10px 20px;
-    flex-shrink: 0; 
+  width: 100%;
+  background-color: #e2e2e2;
+  display: flex;
+  justify-content: space-between;
+  align-items:baseline;
+  padding: 10px 20px;
+  flex-shrink: 0; 
 }
 .menu a.logo {
-    font-family: 'Indie Flower', cursive;
-    font-size: 24px;
-    color: #ff6633;
-    transition: transform 0.3s;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+  color: #ff6633;
+  transition: transform 0.3s;
 }
 
 .menu a.logo:hover {
-    color: black;
+  color: black;
 }
 
 .menu {
-    font-size: 18px;
+  font-size: 18px;
 }
 .menu a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
 }
 
 .menu a:hover {
-    color: #ff6633
+  color: #ff6633
 }
 
 .menu a.active {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .menu a.active:hover {
-    color : #ff6633
+  color : #ff6633
 }
 
 
 .content {
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px;
 }
 .title {
-    font-family: 'Indie Flower', cursive;
-    font-size: 48px;
-    color: #ff6633;
-    margin: 20px 0;
+  font-family: 'Indie Flower', cursive;
+  font-size: 48px;
+  color: #ff6633;
+  margin: 20px 0;
 }
 .description {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 /* Button */
 .button-style {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #e2e2e2;
-    color: #ff6633;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-family: 'Indie Flower', cursive;
-    text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #e2e2e2;
+  color: #ff6633;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', cursive;
+  text-decoration: none;
 }
 .button-style:hover {
-    background-color: #d0d0d0;
+  background-color: #d0d0d0;
 }
 
 .button-style:hover {
-    color: black;
+  color: black;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-  }
-  
-  .container {
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
-  }
-  
-  header {
-    width: 100%;
-    background-color: #e2e2e2;
-    display: flex;
-    justify-content: space-between;
-    align-items:baseline;
-    padding: 10px 20px;
-    flex-shrink: 0; 
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
 }
+
 .menu1 a.logo {
-    font-family: 'Indie Flower', cursive;
-    font-size: 24px;
-    color: #ff6633;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+  color: #ff6633;
 }
 .menu1 {
-    font-size: 18px;
+  font-size: 18px;
 }
 .menu1 a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
 }
 .menu1 a#active {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
-  .word-display {
-    font-size: 2rem;
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-
-  #active {
-    font-weight: bold;
-  }
-  
-  .letter {
-    font-size: 2.5rem;
-  }
-  
-  .input-section {
-    margin: 1rem 0;
-  }
-  
-  .input-section input {
-    font-size: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .gallows {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-  }
-  
-  .hangman {
-    position: relative;
-    width: 80px;
-    height: 120px;
-  }
-  
-  .pole {
-    width: 10px;
-    height: 100px;
-    background-color: black;
-    position: absolute;
-    bottom: 0;
-  }
-  
-  .rope {
-    width: 50px;
-    height: 10px;
-    background-color: black;
-    position: absolute;
-    top: 0;
-    left: 10px;
-  }
-  
-  .head {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 3px solid black;
-    position: absolute;
-    top: 10px;
-    left: 45px;
-  }
-  
-  .body {
-    width: 3px;
-    height: 40px;
-    background-color: black;
-    position: absolute;
-    top: 30px;
-    left: 54px;
-  }
-  
-  .left-arm,
-  .right-arm {
-    width: 20px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    top: 40px;
-  }
-  
-  .left-arm {
-    transform: rotate(-45deg);
-    left: 35px;
-  }
-  
-  .right-arm {
-    transform: rotate(45deg);
-    left: 55px;
-  }
-  
-  .left-leg,
-  .right-leg {
-    width: 20px;
-    height: 3px;
-    background-color: black;
-    position: absolute;
-    top: 70px;
-  }
-  
-  .left-leg {
-    transform: rotate(45deg);
-    left: 35px;
-  }
-  
-  .right-leg {
-    transform: rotate(-45deg);
-    left: 55px;
-  }
-
-
-  
- body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-  }
-  
-  .container {
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
-  }
-  
-  header {
-    width: 100%;
-    background-color: #e2e2e2;
-    display: flex;
-    justify-content: space-between;
-    align-items:baseline;
-    padding: 10px 20px;
-    flex-shrink: 0; 
+.word-display {
+  font-size: 2rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
+
+#active {
+  font-weight: bold;
+}
+
+.letter {
+  font-size: 2.5rem;
+}
+
+.input-section {
+  margin: 1rem 0;
+}
+
+.input-section input {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.gallows {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.hangman {
+  position: relative;
+  width: 80px;
+  height: 120px;
+}
+
+.pole {
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+}
+
+.rope {
+  width: 50px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 10px;
+}
+
+.head {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid black;
+  position: absolute;
+  top: 10px;
+  left: 45px;
+}
+
+.body {
+  width: 3px;
+  height: 40px;
+  background-color: black;
+  position: absolute;
+  top: 30px;
+  left: 54px;
+}
+
+.left-arm,
+.right-arm {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 40px;
+}
+
+.left-arm {
+  transform: rotate(-45deg);
+  left: 35px;
+}
+
+.right-arm {
+  transform: rotate(45deg);
+  left: 55px;
+}
+
+.left-leg,
+.right-leg {
+  width: 20px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  top: 70px;
+}
+
+.left-leg {
+  transform: rotate(45deg);
+  left: 35px;
+}
+
+.right-leg {
+  transform: rotate(-45deg);
+  left: 55px;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
 .menu2 a.logo {
-    font-family: 'Indie Flower', cursive;
-    font-size: 24px;
-    color: #ff6633;
+  font-family: 'Indie Flower', cursive;
+  font-size: 24px;
+  color: #ff6633;
 }
 .menu2 {
-    font-size: 18px;
+  font-size: 18px;
 }
 .menu2 a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
 }
 .menu2 a#active {
-    font-weight: bold;
-    font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .game-align-center{
@@ -318,4 +272,151 @@ header {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .icon::before {
+  font-family: "FontAwesome";
+  content: "\f00c";
+  transform: rotate(45deg);
+  padding-top: 5px;
+}
+.toggle {
+  font-family: "FontAwesome";
+  font-style: normal !important;
+}
+.dev-footer {
+  margin-top: 71px;
+  color: #4e4a46;
+}
+input + .icon::before {
+  font-family: "FontAwesome";
+  content: "\f00d";
+  padding-top: 5px;
+}
+.slider.w-color:before {
+  background-color: #a37eba;
+}
+.slider.w-color {
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider.w-color {
+  background-color: #ccc;
+}
+input:checked + .slider.icon {
+  background-color: #a37eba;
+}
+
+.slider.icon:before {
+  background-color: #ffe05d;
+}
+.slider.icon:after {
+  background-color: #e2df23;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.disabled-toggle {
+  opacity: 0.5;
+  cursor: default;
+}
+
+
+.box {
+  background-color: #0563af;
+  color: white;
+  padding: 10px;
+  width: 120px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+}
+
+.box::before {
+  content: "\f13a";
+  font-family: FontAwesome;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.box:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+  padding: 30px;
+}
+
+.config-align-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap : 100px 20px;
 }

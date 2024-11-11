@@ -1,7 +1,6 @@
 package game
 
 import (
-	"fmt"
 	"hangman-web/config"
 	"html/template"
 )
@@ -9,7 +8,6 @@ import (
 func PrintLetterAndWord(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
 	var data string
 
-	fmt.Println(dataHangmanWeb.GameData.TabSelectedLetter)
 	if len(dataHangmanWeb.GameData.TabSelectedLetter) > 0 {
 		data += "<p>" + dataHangmanWeb.TranslationHangman.LettersAlreadyUsed
 		for _, letter := range dataHangmanWeb.GameData.TabSelectedLetter {
