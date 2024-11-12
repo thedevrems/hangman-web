@@ -2,6 +2,7 @@ package game
 
 import (
 	"hangman-web/config"
+	"hangman-web/inserthtml"
 
 	"github.com/thedevrems/hangman/manageerror"
 	"github.com/thedevrems/hangman/managegame"
@@ -16,9 +17,9 @@ func UseJoker(dataHangmanWeb *config.DataHangmanWeb) string {
 	} else {
 		dataHangmanWeb.GameData.NbrJokers--
 		dataHangmanWeb.GameData.CurrentWord = tempActualWord
-		dataHangmanWeb.GameData.CurrentWordFormattedHTML = FormatWordForHTML(dataHangmanWeb.GameData.CurrentWord)
+		dataHangmanWeb.GameData.CurrentWordFormattedHTML = inserthtml.FormatWordForHTML(dataHangmanWeb.GameData.CurrentWord)
 		dataHangmanWeb.GameData.TabSelectedLetter = append(dataHangmanWeb.GameData.TabSelectedLetter, charJoker)
-		dataHangmanWeb.GameData.PrintLetterAndWord = PrintLetterAndWord(dataHangmanWeb)
+		dataHangmanWeb.GameData.PrintLetterAndWord = inserthtml.PrintLetterAndWord(dataHangmanWeb)
 
 		return dataHangmanWeb.TranslationHangman.JokerUsedMessage + charJoker
 	}

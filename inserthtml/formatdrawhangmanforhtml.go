@@ -1,4 +1,4 @@
-package game
+package inserthtml
 
 import (
 	"hangman-web/config"
@@ -12,26 +12,30 @@ func FormatDrawHangmanForHTML(dataHangmanWeb *config.DataHangmanWeb) template.HT
 	var hangmanHTML string
 	hangmanHTML += `<div class="gallows">`
 	hangmanHTML += `<div class="hangman">`
-	hangmanHTML += `<div class="pole"></div>`
-	hangmanHTML += `<div class="rope"></div>`
 
 	// On ajoute les parties du pendu en fonction de la valeur de `pos`
 	if pos >= 1 {
-		hangmanHTML += `<div class="head"></div>`
+		hangmanHTML += `<div class="pole"></div>`
 	}
 	if pos >= 2 {
-		hangmanHTML += `<div class="body"></div>`
+		hangmanHTML += `<div class="rope"></div>`
 	}
 	if pos >= 3 {
-		hangmanHTML += `<div class="left-arm"></div>`
+		hangmanHTML += `<div class="head"></div>`
 	}
 	if pos >= 4 {
-		hangmanHTML += `<div class="right-arm"></div>`
+		hangmanHTML += `<div class="body"></div>`
 	}
 	if pos >= 5 {
-		hangmanHTML += `<div class="left-leg"></div>`
+		hangmanHTML += `<div class="left-arm"></div>`
 	}
 	if pos >= 6 {
+		hangmanHTML += `<div class="right-arm"></div>`
+	}
+	if pos >= 7 {
+		hangmanHTML += `<div class="left-leg"></div>`
+	}
+	if pos >= 8 {
 		hangmanHTML += `<div class="right-leg"></div>`
 	}
 

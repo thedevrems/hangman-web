@@ -19,13 +19,24 @@ type ServerConfig struct {
 
 // HangmanWebTranslations contient les traductions spécifiques à l'interface web du jeu du pendu
 type HangmanWebTranslations struct {
-	Title           string
-	Description     string
-	StartButtonText string
-	NavLogoTitle    string
-	NavAbout        string
-	NavGame         string
-	NavConfig       string
+	Title                          string
+	Description                    string
+	StartButtonText                string
+	NavLogoTitle                   string
+	NavAbout                       string
+	NavGame                        string
+	NavConfig                      string
+	TitleExtensionAddWordAfterGame string
+	TitleExtensionCountVictory     string
+	TitleExtensionJokers           string
+	TitleExtensionLanguage         string
+	TitleExtensionEnableDifficulty string
+	ExtensionDifficultyLevel1      string
+	ExtensionDifficultyLevel2      string
+	ExtensionDifficultyLevel3      string
+	ExtensionDifficultyLevel4      string
+	ExtensionDifficultyLevel5      string
+	ExtensionDifficultyLevel6      string
 }
 
 // GameData contient les données spécifiques au jeu pour une session
@@ -49,6 +60,12 @@ type GameData struct {
 	PrintLetterAndWord        template.HTML
 	DataInputField            template.HTML
 	AddButtonForUseJoker      template.HTML
+
+	AddFormForTheExtensionLanguage         template.HTML
+	AddFormForTheExtensionVictoryCounter   template.HTML
+	AddFormForTheExtensionEnableDifficulty template.HTML
+	AddFormForTheExtensionAddWordAfterGame template.HTML
+	AddFormForTheExtensionEnableJokers     template.HTML
 }
 
 // DataHangmanWeb regroupe toute les structure

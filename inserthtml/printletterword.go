@@ -1,4 +1,4 @@
-package game
+package inserthtml
 
 import (
 	"hangman-web/config"

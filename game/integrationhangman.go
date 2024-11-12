@@ -3,6 +3,7 @@ package game
 import (
 	"fmt"
 	"hangman-web/config"
+	"hangman-web/inserthtml"
 
 	"github.com/thedevrems/hangman/manageerror"
 	"github.com/thedevrems/hangman/managegame"
@@ -17,7 +18,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 	}
 
 	if dataHangmanWeb.GameData.StageHangman == dataHangmanWeb.GameData.NumOfPossibility {
-		dataHangmanWeb.GameData.DataInputField = AddInputField(dataHangmanWeb, false)
+		dataHangmanWeb.GameData.DataInputField = inserthtml.AddInputField(dataHangmanWeb, false)
 		return "José est mort, merci de cliquer sur le button suivant :"
 	}
 
@@ -29,7 +30,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 
 		if dataHangmanWeb.GameData.NameDifficulty == dataHangmanWeb.TranslationHangman.Hacker {
 			dataHangmanWeb.GameData.StageHangman++
-			dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+			dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 		}
 
 		return dataHangmanWeb.TranslationHangman.MissingCharacterError
@@ -41,7 +42,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 
 			if dataHangmanWeb.GameData.NameDifficulty == dataHangmanWeb.TranslationHangman.Hacker {
 				dataHangmanWeb.GameData.StageHangman++
-				dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+				dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 			}
 
 			return dataHangmanWeb.TranslationHangman.NotALetterError
@@ -51,7 +52,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 
 			if dataHangmanWeb.GameData.NameDifficulty == dataHangmanWeb.TranslationHangman.Hacker {
 				dataHangmanWeb.GameData.StageHangman++
-				dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+				dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 			}
 
 			return dataHangmanWeb.TranslationHangman.AlreadySelectedLetterError
@@ -59,17 +60,17 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 		} else {
 			letterConversion := managegame.GetLetterConversion(runeLetter[0])
 			dataHangmanWeb.GameData.TabSelectedLetter = append(dataHangmanWeb.GameData.TabSelectedLetter, letterConversion)
-			dataHangmanWeb.GameData.PrintLetterAndWord = PrintLetterAndWord(dataHangmanWeb)
+			dataHangmanWeb.GameData.PrintLetterAndWord = inserthtml.PrintLetterAndWord(dataHangmanWeb)
 
 			if managegame.TestLetterInWord(dataHangmanWeb.GameData.TargetWord, letterConversion) {
 				dataHangmanWeb.GameData.CurrentWord = managegame.RevealWord(dataHangmanWeb.GameData.TargetWord, dataHangmanWeb.GameData.CurrentWord, letterConversion)
 				if dataHangmanWeb.GameData.CurrentWord == dataHangmanWeb.GameData.TargetWord {
 					youWin = true
 				}
-				dataHangmanWeb.GameData.CurrentWordFormattedHTML = FormatWordForHTML(dataHangmanWeb.GameData.CurrentWord)
+				dataHangmanWeb.GameData.CurrentWordFormattedHTML = inserthtml.FormatWordForHTML(dataHangmanWeb.GameData.CurrentWord)
 			} else {
 				dataHangmanWeb.GameData.StageHangman++
-				dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+				dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 			}
 		}
 
@@ -80,7 +81,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 
 			if dataHangmanWeb.GameData.NameDifficulty == dataHangmanWeb.TranslationHangman.Hacker {
 				dataHangmanWeb.GameData.StageHangman++
-				dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+				dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 			}
 
 			return dataHangmanWeb.TranslationHangman.AlreadySelectedWordError
@@ -88,12 +89,12 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 		} else {
 
 			dataHangmanWeb.GameData.TabSelectedWord = append(dataHangmanWeb.GameData.TabSelectedWord, selectedLetter)
-			dataHangmanWeb.GameData.PrintLetterAndWord = PrintLetterAndWord(dataHangmanWeb)
+			dataHangmanWeb.GameData.PrintLetterAndWord = inserthtml.PrintLetterAndWord(dataHangmanWeb)
 			if selectedLetter == dataHangmanWeb.GameData.TargetWord {
 				youWin = true
 			} else {
 				dataHangmanWeb.GameData.StageHangman++
-				dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+				dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 			}
 		}
 	} else {
@@ -102,7 +103,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 
 		if dataHangmanWeb.GameData.NameDifficulty == dataHangmanWeb.TranslationHangman.Hacker {
 			dataHangmanWeb.GameData.StageHangman++
-			dataHangmanWeb.GameData.StageHangmanFormattedHTML = FormatDrawHangmanForHTML(dataHangmanWeb)
+			dataHangmanWeb.GameData.StageHangmanFormattedHTML = inserthtml.FormatDrawHangmanForHTML(dataHangmanWeb)
 		}
 
 		return dataHangmanWeb.TranslationHangman.SingleLetterOrWordError
@@ -111,7 +112,7 @@ func IntegrationHangman(dataHangmanWeb *config.DataHangmanWeb, selectedLetter st
 	if youWin {
 		fmt.Println(dataHangmanWeb.TranslationHangman.Congratulations)
 		fmt.Println(dataHangmanWeb.TranslationHangman.GameWonMessage + dataHangmanWeb.GameData.TargetWord)
-		dataHangmanWeb.GameData.DataInputField = AddInputField(dataHangmanWeb, false)
+		dataHangmanWeb.GameData.DataInputField = inserthtml.AddInputField(dataHangmanWeb, false)
 		return dataHangmanWeb.TranslationHangman.Congratulations + dataHangmanWeb.TranslationHangman.GameWonMessage + dataHangmanWeb.GameData.TargetWord
 	}
 

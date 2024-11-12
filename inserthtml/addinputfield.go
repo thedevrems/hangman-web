@@ -1,4 +1,4 @@
-package game
+package inserthtml
 
 import (
 	"hangman-web/config"
@@ -6,7 +6,7 @@ import (
 )
 
 func AddInputField(dataHangmanWeb *config.DataHangmanWeb, enable bool) template.HTML {
-	var data template.HTML
+	var data template.HTML = ``
 	if enable {
 		data = `
 			<form action="/submit-letter-word" method="POST">
@@ -15,8 +15,6 @@ func AddInputField(dataHangmanWeb *config.DataHangmanWeb, enable bool) template.
 				</div>
 			</form>
 		`
-	} else {
-		data = template.HTML("")
 	}
 	return data
 }

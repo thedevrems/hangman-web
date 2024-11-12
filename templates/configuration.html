@@ -18,87 +18,40 @@
     </header>
 
     <main>
-        <div class="config-align-center">
-            <div class="align-game-button" >
-                <label class="switch">
-                    <input checked type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>Off : En - On : Fr</h6>
-                </label> 
-                <label class="switch">
-                    <input checked type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>On (checked)</h6>
-                </label>
-                <select class="box">
-                  <option>Très Facile</option>
-                  <option>Facile</option>
-                  <option>Moyen</option>
-                  <option>Option 4</option>
-                  <option>Option 5</option>
-                </select>
-            </div>
-            <div>
-                <label class="switch">
-                    <input checked type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>On (checked)</h6>
-                </label> 
-                <label class="switch">
-                    <input checked type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>On (checked)</h6>
-                </label>
-            </div>
+        <div class="config-game-button">
+            <!-- Formulaire pour la langue -->
+            {{.GameData.AddFormForTheExtensionLanguage}}
 
-            <!-- <div>
-                <form action="/reset-game" method="POST">
-                    <label class="switch">
-                        <input checked type="checkbox" />
-                        <span class="slider round"></span>
-                        <h6>On (checked)</h6>
-                    </label> 
+            <!-- Formulaire pour le compteur de victoire -->
+            {{.GameData.AddFormForTheExtensionVictoryCounter}}
+
+            <!-- Formulaire pour la difficulté -->
+            <!-- <div class="config-texte-align">
+
+                <label for="difficulty">Activer la difficulté</label>
+                <form action="#" method="post">
+                    <div class="button r" id="button-4">
+                        <input type="checkbox" id="difficulty" name="difficulty" class="checkbox" checked />
+                        <div class="knobs"></div>
+                        <div class="layer"></div>
+                    </div>
                 </form>
-                <label class="switch">
-                    <input checked type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>On (checked)</h6>
-                </label>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>Off (checked)</h6>
-                </label>
-                
-                <label class="switch">
-                        <input type="checkbox" />
-                        <span class="slider round"></span>
-                        <h6>On (checked)</h6>
-                </label>
-                <div class="box">
-                    <select>
-                      <option>Option 1</option>
-                      <option>Option 2</option>
-                      <option>Option 3</option>
-                      <option>Option 4</option>
-                      <option>Option 5</option>
-                    </select>
-                </div> 
-            </div>            
-            <div>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>On (checked)</h6>
-                </label>
-                <label class="switch">
-                    <input type="checkbox" />
-                    <span class="slider round"></span>
-                    <h6>Off (checked)</h6>
-                </label>    
-            </div>
-        </div> -->
+                <form action="#" method="post">
+                    <select name="difficultyLevel">
+                        <option selected value="0">Pure CSS Select</option>
+                        <option value="1">No Wrapper</option>
+                        <option value="2">No JS</option>
+                        <option value="3">Nice!</option>
+                    </select> 
+                </form>
+            </div> -->
+            {{.GameData.AddFormForTheExtensionEnableDifficulty}}
+            <!-- Formulaire pour les jokers -->
+            {{.GameData.AddFormForTheExtensionEnableJokers}}
 
+            <!-- Formulaire pour l'ajout de mot -->
+            {{.GameData.AddFormForTheExtensionAddWordAfterGame}}
+        </div>
     </main>
 
 </body>

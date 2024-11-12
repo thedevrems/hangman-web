@@ -2,6 +2,7 @@ package game
 
 import (
 	"hangman-web/config"
+	"hangman-web/inserthtml"
 	"html/template"
 
 	"github.com/thedevrems/hangman/managegame"
@@ -36,7 +37,7 @@ func InitWord(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
 	dataHangmanWeb.GameData.CurrentWord = revealword
 
 	// Formats the word so that it is ready for display in the HTML interface.
-	formatWord := FormatWordForHTML(revealword)
+	formatWord := inserthtml.FormatWordForHTML(revealword)
 
 	// Returns the formatted word as HTML content for display.
 	return formatWord
