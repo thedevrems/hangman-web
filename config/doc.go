@@ -19,24 +19,29 @@ type ServerConfig struct {
 
 // HangmanWebTranslations contient les traductions spécifiques à l'interface web du jeu du pendu
 type HangmanWebTranslations struct {
-	Title                          string
-	Description                    string
-	StartButtonText                string
-	NavLogoTitle                   string
-	NavAbout                       string
-	NavGame                        string
-	NavConfig                      string
-	TitleExtensionAddWordAfterGame string
-	TitleExtensionCountVictory     string
-	TitleExtensionJokers           string
-	TitleExtensionLanguage         string
-	TitleExtensionEnableDifficulty string
-	ExtensionDifficultyLevel1      string
-	ExtensionDifficultyLevel2      string
-	ExtensionDifficultyLevel3      string
-	ExtensionDifficultyLevel4      string
-	ExtensionDifficultyLevel5      string
-	ExtensionDifficultyLevel6      string
+	Title                           string
+	Description                     string
+	StartButtonText                 string
+	NavLogoTitle                    string
+	NavAbout                        string
+	NavGame                         string
+	NavConfig                       string
+	TitleExtensionAddWordAfterGame  string
+	TitleExtensionCountVictory      string
+	TitleExtensionJokers            string
+	TitleExtensionLanguage          string
+	TitleExtensionEnableDifficulty  string
+	ExtensionDifficultyLevel1       string
+	ExtensionDifficultyLevel2       string
+	ExtensionDifficultyLevel3       string
+	ExtensionDifficultyLevel4       string
+	ExtensionDifficultyLevel5       string
+	ExtensionDifficultyLevel6       string
+	CantUseJoker                    string
+	RestartGameButton               string
+	PlaceHolderInputField           string
+	UseJoker                        string
+	PlaceHolderInputFieldForAddWord string
 }
 
 // GameData contient les données spécifiques au jeu pour une session
@@ -49,6 +54,8 @@ type GameData struct {
 	NbrLoose                  int
 	NbrJokers                 int
 	NameDifficulty            string
+	NameFile                  string
+	IdDifficulty              int
 	StageHangman              int
 	StageHangmanFormattedHTML template.HTML
 	NumOfPossibility          int
@@ -59,7 +66,10 @@ type GameData struct {
 	PrintNbrJokers            template.HTML
 	PrintLetterAndWord        template.HTML
 	DataInputField            template.HTML
+	StateInputField           bool
+	StateInputFieldForAddWord bool
 	AddButtonForUseJoker      template.HTML
+	DataInputFieldForAddWord  template.HTML
 
 	AddFormForTheExtensionLanguage         template.HTML
 	AddFormForTheExtensionVictoryCounter   template.HTML

@@ -35,12 +35,13 @@
       </div>
       <!-- Envoie de lettre et de mots -->
       {{.GameData.DataInputField}}
+      {{.GameData.DataInputFieldForAddWord}}
       <!-- Affichage du hangman -->
       {{.GameData.StageHangmanFormattedHTML}}
       <!-- Bouton de réinitialisation -->
        <div class="align-game-button">
         <form action="/reset-game" method="POST">
-          <button type="submit" class="button-style">Réinitialiser la partie</button>
+          <button type="submit" class="button-style">{{.HangmanWebTranslations.RestartGameButton}}</button>
         </form>
         {{.GameData.AddButtonForUseJoker}}
        </div>

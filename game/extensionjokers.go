@@ -1,4 +1,4 @@
-package inserthtml
+package game
 
 import (
 	"fmt"
@@ -18,7 +18,7 @@ func ExtensionJokers(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
         <form action="enable-extension-enablejokers" method="POST" class="config-texte-align">
             <label for="enablejokers">%s</label>
             <div class="button r" id="button-4">
-                <input type="checkbox" id="enablejokers" name="enableJokers" onchange="this.form.submit()" value="YES" class="checkbox"%s/>
+                <input type="checkbox" id="enablejokers" name="enableJokers" onchange="this.form.submit()" value="NO" class="checkbox"%s/>
                 <div class="knobs"></div>
                 <div class="layer"></div>
             </div>

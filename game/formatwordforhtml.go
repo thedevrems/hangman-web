@@ -1,4 +1,4 @@
-package inserthtml
+package game
 
 import (
 	"html/template"

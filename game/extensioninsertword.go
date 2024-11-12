@@ -1,4 +1,4 @@
-package inserthtml
+package game
 
 import (
 	"fmt"
@@ -18,7 +18,7 @@ func ExtensionInsertWord(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
         <form action="enable-extension-insertword" method="POST" class="config-texte-align">
             <label for="insertword">%s</label>
             <div class="button r" id="button-4">
-                <input type="checkbox" id="insertword" name="insertWord" onchange="this.form.submit()" value="YES" class="checkbox"%s/>
+                <input type="checkbox" id="insertword" name="insertWord" onchange="this.form.submit()" value="NO" class="checkbox"%s/>
                 <div class="knobs"></div>
                 <div class="layer"></div>
             </div>

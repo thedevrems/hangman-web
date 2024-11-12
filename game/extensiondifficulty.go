@@ -1,4 +1,4 @@
-package inserthtml
+package game
 
 import (
 	"fmt"
@@ -23,7 +23,7 @@ func ExtensionDifficulty(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
 	if dataHangmanWeb.DataConfigHangman.EnableDifficulty {
 		for i, level := range levels {
 			selected := ""
-			if i == 2 { // Niveau 3 est sélectionné par défaut
+			if i == dataHangmanWeb.GameData.IdDifficulty-1 { // Niveau 3 est sélectionné par défaut
 				selected = " selected"
 			}
 			difficultyOptions += fmt.Sprintf(`<option value="%d"%s>%s</option>`, i+1, selected, level)
@@ -35,7 +35,7 @@ func ExtensionDifficulty(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
 	if dataHangmanWeb.DataConfigHangman.EnableDifficulty {
 		dataswitchdifficulty = fmt.Sprintf(`
             <form action="enable-extension-switchdifficulty" method="post">
-                <select name="difficultyLevel">
+                <select name="difficultyLevel" onchange="this.form.submit()">
                     %s
                 </select>
             </form>
@@ -47,7 +47,7 @@ func ExtensionDifficulty(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
         <form action="enable-extension-enabledifficulty" method="post" class="config-texte-align">
             <label for="enabledifficulty">%s</label>
             <div class="button r" id="button-4">
-                <input type="checkbox" id="enabledifficulty" name="enableDifficulty" class="checkbox"%s />
+                <input type="checkbox" id="enabledifficulty" name="enableDifficulty" onchange="this.form.submit()" value="NO" class="checkbox"%s  />
                 <div class="knobs"></div>
                 <div class="layer"></div>
             </div>

@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hangman Web</title>
+  <title>{{.HangmanWebTranslations.Title}}</title>
   <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="menu2">
-            <a href="./index.html" class="logo">HANG • MAN • WEB</a>
-            <a href="./index.html" class="active">A propos</a>
-            <a href="./game.html" >Jeu</a>
-            <a href="./configuration.html" id="active">Configuration</a>
+            <a href="./index.html" class="logo">{{.HangmanWebTranslations.NavLogoTitle}}</a>
+            <a href="./index.html" class="active">{{.HangmanWebTranslations.NavAbout}}</a>
+            <a href="./game.html" >{{.HangmanWebTranslations.NavGame}}</a>
+            <a href="./configuration.html" id="active">{{.HangmanWebTranslations.NavConfig}}</a>
         </div>
     </header>
 
@@ -26,26 +26,9 @@
             {{.GameData.AddFormForTheExtensionVictoryCounter}}
 
             <!-- Formulaire pour la difficulté -->
-            <!-- <div class="config-texte-align">
-
-                <label for="difficulty">Activer la difficulté</label>
-                <form action="#" method="post">
-                    <div class="button r" id="button-4">
-                        <input type="checkbox" id="difficulty" name="difficulty" class="checkbox" checked />
-                        <div class="knobs"></div>
-                        <div class="layer"></div>
-                    </div>
-                </form>
-                <form action="#" method="post">
-                    <select name="difficultyLevel">
-                        <option selected value="0">Pure CSS Select</option>
-                        <option value="1">No Wrapper</option>
-                        <option value="2">No JS</option>
-                        <option value="3">Nice!</option>
-                    </select> 
-                </form>
-            </div> -->
-            {{.GameData.AddFormForTheExtensionEnableDifficulty}}
+            <div class="config-texte-align">
+                {{.GameData.AddFormForTheExtensionEnableDifficulty}}
+            </div>
             <!-- Formulaire pour les jokers -->
             {{.GameData.AddFormForTheExtensionEnableJokers}}
 

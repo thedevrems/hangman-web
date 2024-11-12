@@ -58,6 +58,11 @@ func main() {
 	// If the game's difficulty configuration is empty, set it to the default value (Normal).
 	if dataHangmanWeb.GameData.NameDifficulty == "" {
 		dataHangmanWeb.GameData.NameDifficulty = dataHangmanWeb.TranslationHangman.Normal
+		if dataHangmanWeb.DataConfigHangman.Language == "en" {
+			dataHangmanWeb.GameData.NameFile = dataHangmanWeb.DataFiles.NameFilesConfigEnglishWordsDefault
+		} else {
+			dataHangmanWeb.GameData.NameFile = dataHangmanWeb.DataFiles.NameFilesConfigFrenchWordsDefault
+		}
 	}
 
 	// Manage the files needed for the game to function properly.
