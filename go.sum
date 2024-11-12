@@ -6,3 +6,5 @@ github.com/thedevrems/hangman v0.0.0-20241031094957-93abc8778cdc h1:YTdBTOW5zeaF
 github.com/thedevrems/hangman v0.0.0-20241031094957-93abc8778cdc/go.mod h1:4D2itojPZDKiTrLpxUiMO+hBxkLqFmL/gbKAumbCqe8=
 github.com/thedevrems/hangman v0.0.0-20241106225738-97c7d6db655e h1:Vkxpz2HGCku/D4I+06BLl3zsQE67GIPGFsdSP49tKIs=
 github.com/thedevrems/hangman v0.0.0-20241106225738-97c7d6db655e/go.mod h1:4D2itojPZDKiTrLpxUiMO+hBxkLqFmL/gbKAumbCqe8=
+github.com/thedevrems/hangman v0.0.0-20241112231747-f1f0196db37f h1:T10+YlZvEkucqlwTp81dP6skyClN5c6TtmDkh/89iB4=
+github.com/thedevrems/hangman v0.0.0-20241112231747-f1f0196db37f/go.mod h1:4D2itojPZDKiTrLpxUiMO+hBxkLqFmL/gbKAumbCqe8=
