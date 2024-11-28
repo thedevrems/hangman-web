@@ -150,90 +150,155 @@ header {
   border-radius: 5px;
 }
 
-.gallows {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
 .hangman {
   position: relative;
-  width: 80px;
-  height: 120px;
+  width: 200px;
+  height: 300px;
+  margin: 20px auto;
 }
 
-.pole {
-  width: 10px;
-  height: 100px;
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-}
-
-.rope {
+.gallows {
+  position: relative;
   width: 50px;
-  height: 10px;
-  background-color: black;
+  height: 200px;
+  margin: 0 auto;
+  border-left: 5px solid #333;
+}
+
+.beam {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 0;
+  width: 100px;
+  height: 5px;
+  background-color: #333;
+  transform: translateX(-50%);
+}
+
+.triangle-right {
+  position: absolute;
+  top: 8px;
+  left: -4px;
+  width: 20px;
+  height: 5px;
+  background-color: #333;
+  transform: rotate(-45deg);
+}
+
+.triangle-left {
+  position: absolute;
+  top: 8px;
+  left: -21px;
+  width: 20px;
+  height: 5px;
+  background-color: #333;
+  transform: rotate(45deg);
+}
+.rope {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 5px;
+  height: 30px;
+  background-color: #333;
+}
+
+.support {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 5px;
+  background-color: #333;
+  transform: translateX(-25%);
 }
 
 .head {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 3px solid black;
   position: absolute;
-  top: 10px;
-  left: 45px;
+  top: 30px;
+  left: 115px;
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 50%;
 }
 
 .body {
-  width: 3px;
-  height: 40px;
-  background-color: black;
   position: absolute;
-  top: 30px;
-  left: 54px;
+  top: 60px;
+  left: 127px;
+  width: 5px;
+  height: 50px;
+  background-color: #333;
 }
 
-.left-arm,
-.right-arm {
+.arm.right {
+  position: absolute;
+  top: 75px;
+  left: 127px;
   width: 20px;
-  height: 3px;
-  background-color: black;
-  position: absolute;
-  top: 40px;
-}
-
-.left-arm {
-  transform: rotate(-45deg);
-  left: 35px;
-}
-
-.right-arm {
+  height: 5px;
+  background-color: #333;
   transform: rotate(45deg);
-  left: 55px;
 }
 
-.left-leg,
-.right-leg {
+.arm.left {
+  position: absolute;
+  top: 75px;
+  left: 112px;
   width: 20px;
-  height: 3px;
-  background-color: black;
-  position: absolute;
-  top: 70px;
-}
-
-.left-leg {
-  transform: rotate(45deg);
-  left: 35px;
-}
-
-.right-leg {
+  height: 5px;
+  background-color: #333;
   transform: rotate(-45deg);
-  left: 55px;
+}
+
+.leg.right {
+  position: absolute;
+  top: 114px;
+  left: 127px;
+  width: 20px;
+  height: 5px;
+  background-color: #333;
+  transform: rotate(45deg);
+}
+
+.leg.left {
+  position: absolute;
+  top: 114px;
+  left: 113px;
+  width: 20px;
+  height: 5px;
+  background-color: #333;
+  transform: rotate(-45deg);
+}
+
+.eye.left {
+  position: absolute;
+  top: 42px;
+  left: 120px;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.eye.right {
+  position: absolute;
+  top: 42px;
+  left: 135px;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.mouth {
+  position: absolute;
+  top: 50px;
+  left: 122.5px;
+  width: 15px;
+  height: 5px;
+  border-bottom: 2px solid #000;
+  border-radius: 10px;
 }
 
 .container {

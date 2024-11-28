@@ -2,6 +2,7 @@ package config
 
 import "html/template"
 
+// Initialization of values by default of the GameData structure
 func ConfigDataGameHangmanWeb() *GameData {
 	return &GameData{
 		TargetWord:                             "",
@@ -16,7 +17,7 @@ func ConfigDataGameHangmanWeb() *GameData {
 		IdDifficulty:                           3,
 		StageHangman:                           0,
 		StageHangmanFormattedHTML:              template.HTML(""),
-		NumOfPossibility:                       10,
+		NumOfPossibility:                       9,
 		TabSelectedLetter:                      []string{},
 		TabSelectedWord:                        []string{},
 		PrintNbrVictoryAndLoose:                template.HTML(""),

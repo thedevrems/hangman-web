@@ -6,12 +6,17 @@ import (
 	"html/template"
 )
 
+// ExtensionSwitchLanguage generates an HTML form with a checkbox to toggle between
+// English and French languages.
+//
+// Parameters:
+//   - dataHangmanWeb (*config.DataHangmanWeb): a structure containing configuration
+//     and translation data for the Hangman-Web application.
+//
+// Returns:
+// - template.HTML: an HTML block containing a form with a checkbox to switch between English and French languages.
 func ExtensionSwitchLanguage(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
-	checked := ""
-
-	if dataHangmanWeb.DataConfigHangman.Language == "en" {
-		checked = " checked"
-	}
+	checked := IfChecked(dataHangmanWeb.DataConfigHangman.Language != "en")
 
 	data := fmt.Sprintf(`
           <form action="enable-extension-switchlanguage" method="POST" class="config-texte-align">

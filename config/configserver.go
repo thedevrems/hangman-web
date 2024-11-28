@@ -1,6 +1,6 @@
 package config
 
-// data de la configuration du serveur
+// Initialization of values by default of the ServerConfig structure
 func ConfigServer() *ServerConfig {
 	return &ServerConfig{
 		Path:       "templates",

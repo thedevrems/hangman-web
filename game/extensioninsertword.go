@@ -6,14 +6,19 @@ import (
 	"html/template"
 )
 
+// ExtensionInsertWord generates an HTML form with a checkbox to enable or disable
+// the feature that allows adding a word after the game ends.
+//
+// Parameters:
+//   - dataHangmanWeb (*config.DataHangmanWeb): a structure containing configuration
+//     and translation data for the Hangman-Web application.
+//
+// Returns:
+//   - template.HTML: an HTML block containing a form with a checkbox to enable or disable
+//     the "add word after game" feature.
 func ExtensionInsertWord(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
-	// Détermine l'état "checked"
-	checked := ""
-	if !dataHangmanWeb.DataConfigHangman.AddWordAfterGame {
-		checked = " checked"
-	}
+	checked := IfChecked(dataHangmanWeb.DataConfigHangman.AddWordAfterGame)
 
-	// Crée et retourne la chaîne HTML
 	data := fmt.Sprintf(`
         <form action="enable-extension-insertword" method="POST" class="config-texte-align">
             <label for="insertword">%s</label>

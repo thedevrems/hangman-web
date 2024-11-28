@@ -6,18 +6,18 @@ import (
 	"github.com/thedevrems/hangman/configuration"
 )
 
-// ServerConfig représente la configuration du serveur
+// ServerConfig holds configuration settings specific to the server setup.
 type ServerConfig struct {
-	Path       string
-	IndexPage  string
-	ConfigPage string
-	GamePage   string
-	URL        string
-	Port       string
-	Slash      string
+	Path       string // Root path for the server.
+	IndexPage  string // Path or name of the index page.
+	ConfigPage string // Path or name of the configuration page.
+	GamePage   string // Path or name of the game page.
+	URL        string // URL where the server will be hosted.
+	Port       string // Port number on which the server will listen.
+	Slash      string // Character or sequence representing a URL slash.
 }
 
-// HangmanWebTranslations contient les traductions spécifiques à l'interface web du jeu du pendu
+// HangmanWebTranslations holds translations specific to the Hangman web interface.
 type HangmanWebTranslations struct {
 	Title                           string
 	Description                     string
@@ -44,7 +44,7 @@ type HangmanWebTranslations struct {
 	PlaceHolderInputFieldForAddWord string
 }
 
-// GameData contient les données spécifiques au jeu pour une session
+// GameData holds the current state and data for an ongoing game session.
 type GameData struct {
 	TargetWord                string
 	CurrentWord               string
@@ -78,14 +78,14 @@ type GameData struct {
 	AddFormForTheExtensionEnableJokers     template.HTML
 }
 
-// DataHangmanWeb regroupe toute les structure
+// DataHangmanWeb aggregates all configuration, translation, and game data structures for the Hangman web interface.
 type DataHangmanWeb struct {
-	*ServerConfig
-	*HangmanWebTranslations
-	*GameData
-	*configuration.DataError
-	*configuration.DataGameHangman
-	*configuration.DataFiles
-	*configuration.DataConfigHangman
-	*configuration.TranslationHangman
+	*ServerConfig                     // Server configuration data.
+	*HangmanWebTranslations           // Translations for web interface elements.
+	*GameData                         // Game session data and current state.
+	*configuration.DataError          // Error messages and error configuration data.
+	*configuration.DataGameHangman    // Main configuration for the Hangman game.
+	*configuration.DataFiles          // File data for word lists and other resources.
+	*configuration.DataConfigHangman  // Default Hangman game settings.
+	*configuration.TranslationHangman // Game-specific translations.
 }

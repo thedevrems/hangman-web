@@ -6,14 +6,18 @@ import (
 	"html/template"
 )
 
+// ExtensionJokers generates an HTML form with a checkbox to enable or disable
+// the jokers feature.
+// Parameters:
+//   - dataHangmanWeb (*config.DataHangmanWeb): a structure containing configuration
+//     and translation data for the Hangman-Web application.
+//
+// Returns:
+//   - template.HTML: an HTML block containing a form with a checkbox to enable or disable
+//     the jokers feature.
 func ExtensionJokers(dataHangmanWeb *config.DataHangmanWeb) template.HTML {
-	// Détermine l'état "checked" en fonction du compteur de victoire
-	checked := ""
-	if !dataHangmanWeb.DataConfigHangman.EnableJokers {
-		checked = " checked"
-	}
+	checked := IfChecked(dataHangmanWeb.DataConfigHangman.EnableJokers)
 
-	// Crée et retourne la chaîne HTML
 	data := fmt.Sprintf(`
         <form action="enable-extension-enablejokers" method="POST" class="config-texte-align">
             <label for="enablejokers">%s</label>

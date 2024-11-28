@@ -58,6 +58,7 @@ func main() {
 	// If the game's difficulty configuration is empty, set it to the default value (Normal).
 	if dataHangmanWeb.GameData.NameDifficulty == "" {
 		dataHangmanWeb.GameData.NameDifficulty = dataHangmanWeb.TranslationHangman.Normal
+		// Save the name of the file containing the words to guess according to the language preset
 		if dataHangmanWeb.DataConfigHangman.Language == "en" {
 			dataHangmanWeb.GameData.NameFile = dataHangmanWeb.DataFiles.NameFilesConfigEnglishWordsDefault
 		} else {

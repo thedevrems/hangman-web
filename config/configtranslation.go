@@ -1,5 +1,6 @@
 package config
 
+// Initialization of values by default of the HangmanWebTranslations structure for the language FR
 func DataTranslationHangmanWebFr() *HangmanWebTranslations {
 	return &HangmanWebTranslations{
 		Title:                           "Hangman Web",
@@ -28,6 +29,7 @@ func DataTranslationHangmanWebFr() *HangmanWebTranslations {
 	}
 }
 
+// Initialization of values by default of the HangmanWebTranslations structure for the language EN
 func DataTranslationHangmanWebEn() *HangmanWebTranslations {
 	return &HangmanWebTranslations{
 		Title:                           "Hangman Web",
